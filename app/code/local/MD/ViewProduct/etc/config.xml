@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <MD_ViewProduct>
+            <version>1.0.0</version>
+        </MD_ViewProduct>
+    </modules>
+    <global>
+        <helpers>
+            <viewproduct>
+                <class>MD_ViewProduct_Helper</class>
+            </viewproduct>
+        </helpers>
+        <models>
+            <viewproduct>
+                <class>MD_ViewProduct_Model</class>
+            </viewproduct>
+        </models>
+    </global>
+    <adminhtml>
+        <events>
+            <controller_action_layout_render_before_adminhtml_catalog_product_edit>
+                <observers>
+                    <view_product_add_button>
+                        <class>MD_ViewProduct_Model_Observer_Product</class>
+                        <method>addButton</method>
+                    </view_product_add_button>
+                </observers>
+            </controller_action_layout_render_before_adminhtml_catalog_product_edit>
+            <controller_action_layout_render_before_adminhtml_catalog_category_edit>
+                <observers>
+                    <view_category_add_button>
+                        <class>MD_ViewProduct_Model_Observer_Category</class>
+                        <method>addButton</method>
+                    </view_category_add_button>
+                </observers>
+            </controller_action_layout_render_before_adminhtml_catalog_category_edit>
+        </events>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <MD_ViewProduct before="Mage_Adminhtml">MD_ViewProduct_Adminhtml</MD_ViewProduct>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

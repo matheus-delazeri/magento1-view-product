@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MD_ViewProduct>
+            <codePool>local</codePool>
+            <active>true</active>
+        </MD_ViewProduct>
+    </modules>
+</config>
