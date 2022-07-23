@@ -28,14 +28,14 @@
                     </view_product_add_button>
                 </observers>
             </controller_action_layout_render_before_adminhtml_catalog_product_edit>
-            <controller_action_layout_render_before_adminhtml_catalog_category_edit>
+            <adminhtml_block_html_before>
                 <observers>
-                    <view_category_add_button>
-                        <class>MD_ViewProduct_Model_Observer_Category</class>
-                        <method>addButton</method>
-                    </view_category_add_button>
+                    <view_product_add_column>
+                        <class>MD_ViewProduct_Model_Observer_Product</class>
+                        <method>addColumn</method>
+                    </view_product_add_column>
                 </observers>
-            </controller_action_layout_render_before_adminhtml_catalog_category_edit>
+            </adminhtml_block_html_before>
         </events>
     </adminhtml>
     <admin>
