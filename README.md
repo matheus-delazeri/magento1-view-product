@@ -6,6 +6,6 @@ Adds a button in the product's edit page that redirects to product's page in the
 # How to install
 Using [modgit](https://github.com/jreinke/modgit), run:
 ```
-> modgit add previewproduct https://github.com/matheus-delazeri/magento1-view-product.git
+> modgit add -b main previewproduct https://github.com/matheus-delazeri/magento1-view-product.git
 ```
 Or add the module's files inside your Magento root directory.
